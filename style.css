@@ -1,0 +1,12 @@
+.container, .numbers, .operators {
+display: flex;
+justify-content: center;
+margin: 20px;
+gap: 5px;
+}
+
+#display{
+    width: 300px;
+    height: 40px;
+    border: 1px red solid;
+}
