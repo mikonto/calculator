@@ -27,40 +27,50 @@ function operate(operator, a, b) {
 
 // Create the functions that populate the display when you click the number buttons… 
 // you should be storing the ‘display value’ in a variable somewhere for use in the next step.
-document.querySelectorAll('.numbers').forEach(item => {
+
+let displayNum = ""; // number that goes on the display
+let displayOperator = ""; // operator that goes on the display
+
+let firstNumber = 0;
+
+document.querySelectorAll('.numbers').forEach(item => { // when number is pressed, store it to variable and add to display
     item.addEventListener('click', event => {
-        addToDisplay(event.target.id);
-        console.log(event.target.id);
+        displayNum += event.target.id;
+        addToDisplay(displayNum);
     })
 })
-  
-document.querySelectorAll('.operators').forEach(item => {
+
+function addToDisplay(param){ // add parameter to display
+    document.getElementById("display").innerHTML = param;
+}
+
+// store the first number that is input into the calculator when a user presses an operator, 
+// and also save which operation has been chosen and then operate() on them when the user presses the “=” key.
+
+document.querySelectorAll('.operators').forEach(item => { 
     item.addEventListener('click', event => {
-    addToDisplay(event.target.id);
-    console.log(event.target.id);
+        displayOperator = event.target.id;
+        firstNumber = Number(displayNum);
     })
 })
+
+
+
+/*
+
 
 document.getElementById("equals").addEventListener('click', event => {
     addToDisplay(event.target.id);
-    console.log(event.target.id);
     })
-
-document.getElementById("clear").addEventListener('click', event => {
-    addToDisplay(event.target.id);
-    console.log(event.target.id);
-    })
-
-
-
 
 function addToDisplay(num){
     document.getElementById("display").innerHTML += num;
 }
+*/
 
- 
+/*
 
-
-
-
-
+document.getElementById("clear").addEventListener('click', event => {
+    addToDisplay(event.target.id);
+    })
+ */
