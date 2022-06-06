@@ -1,12 +1,69 @@
-.container, .numbers, .operators {
-display: flex;
-justify-content: center;
-margin: 20px;
-gap: 5px;
+body {
+    background-color: beige;
+}
+
+#main {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    border: 5px purple solid;
+    background-color: lightblue;
+    border-radius: 25px;
+    width: 45vh;
+    height: 68vh;
 }
 
 #display{
-    width: 300px;
-    height: 40px;
-    border: 1px red solid;
+    text-align:right;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    padding: 1vh;
+    width: 82%;
+    height: 20%;
+    border: 5px red solid;
+    background-color: lightgray;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 9vh;
+}
+
+#button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* height: 50%; */
+    padding: 1vh;
+
+}
+
+.numbers, .operators, #equals, #clear, #reverse {
+width: 9vh;
+height: 8vh;
+border: 5px blue solid;
+border-radius: 10px;
+font-family: 'Courier New', Courier, monospace;
+font-size: 3.5vh;
+}
+
+.numbers{
+    background-color: seagreen;
+}
+
+.operators, #equals, #reverse {
+    background-color: burlywood;
+}
+
+#equals {
+    width: 18vh;
+    background-color: burlywood;
+
+}
+
+.zero {
+    width: 18vh;
+}
+
+#clear {
+    background-color: palevioletred;
 }
