@@ -38,12 +38,16 @@ body {
 }
 
 .numbers, .operators, #equals, #clear, #reverse, #backspace {
+display: flex;
+justify-content: center;
+align-items: center;
 width: 9vh;
 height: 8vh;
 border: 5px blue solid;
 border-radius: 10px;
 font-family: 'Courier New', Courier, monospace;
 font-size: 3.5vh;
+
 }
 
 .numbers{
