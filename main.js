@@ -104,3 +104,9 @@ function resetCalculator() { // reset calculator - set variables to undefined an
 
 // function to round up the results of math functions
 const round = (n, d) => Math.round(n * Math.pow(10, d)) / Math.pow(10, d)
+
+
+document.getElementById("backspace").addEventListener('click', event => { // when equals is pressed
+    displayNum = displayNum.slice(0, -1) //'abcde'        
+    document.getElementById("display").innerHTML = displayNum; // show result of calculation on display
+    })

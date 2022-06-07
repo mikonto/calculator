@@ -37,7 +37,7 @@ body {
 
 }
 
-.numbers, .operators, #equals, #clear, #reverse {
+.numbers, .operators, #equals, #clear, #reverse, #backspace {
 width: 9vh;
 height: 8vh;
 border: 5px blue solid;
@@ -55,15 +55,23 @@ font-size: 3.5vh;
 }
 
 #equals {
-    width: 18vh;
     background-color: burlywood;
 
 }
 
-.zero {
-    width: 18vh;
+.add {
+    height: 16vh;
 }
 
 #clear {
     background-color: palevioletred;
+}
+
+#backspace {
+    background-color: orange; 
+}
+
+.big-btn {
+    display: flex;
+    flex-direction: column;
 }
